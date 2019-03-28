@@ -1,0 +1,30 @@
+.App-logo {
+    height: 60px;
+    margin-left: 200px;
+}
+
+.App-header {
+    background-color: white; 
+    text-align: left;
+}
+
+.App-name-Bo {
+    display: inline;
+    position: absolute;
+    top: 15px;
+    text-align: left;
+    color: black;
+    font-family: Monoton; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+.App-name-liver {
+    color: orange;
+    font-family: Monoton; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+
+.App-slogan {
+
+}
+
+.App-introduction {
+
+}
