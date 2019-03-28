@@ -22,7 +22,11 @@
 }
 
 .App-slogan {
-
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 100%;
+    padding-left: 210px;
+    padding-top: 30px;
 }
 
 .App-introduction {

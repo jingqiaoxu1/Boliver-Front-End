@@ -9,7 +9,7 @@ export class TopBar extends React.Component {
                 <h1 className="App-name-Bo"><span className="App-name-liver">Bo</span>liver</h1>
 
                 <p className="App-slogan">
-                    You pick the location,
+                    You pick the location,<br />
                     we will take care of the rest
                 </p>
 
