@@ -1,6 +1,7 @@
 @import 'styles/App.css';
 @import '~antd/dist/antd.css';
 @import 'styles/TopBar.css';
+@import 'styles/NavBar.css';
 
 body {
   margin: 0;
