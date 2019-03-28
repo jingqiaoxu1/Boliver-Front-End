@@ -5,6 +5,7 @@ export class TopBar extends React.Component {
     render() {
         return (
             <header className="App-header">
+                
                 <img className="App-logo" src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" />
                 <h1 className="App-name-Bo"><span className="App-name-liver">Bo</span>liver</h1>
 
@@ -17,6 +18,8 @@ export class TopBar extends React.Component {
                         I’m a great place for you to tell a story and let your users<br />
                         know a little more about you.
                 </p>
+                
+                <img className="App-background1" src={process.env.PUBLIC_URL + '/background1.jpg'} alt="background1" />
                 
             </header>
         )
