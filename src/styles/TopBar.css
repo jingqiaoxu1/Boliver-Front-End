@@ -6,6 +6,7 @@
 .App-header {
     background-color: transparent; 
     text-align: left;
+    height: 360px;
 }
 
 .App-name-Bo {
@@ -33,11 +34,14 @@
     font-family: 'Open Sans', sans-serif;
     line-height: 30px;
 }
-
 .App-background1 {
     width: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
+}
+
+.App-background1 img{
+    width: 100%;
 }
 

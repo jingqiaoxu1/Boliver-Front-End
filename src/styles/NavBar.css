@@ -1,7 +1,6 @@
 .NavBar-background {
     background-color: #2B2A2A;
     height: 40px;
-    position: relative;
-    top: 30px;
-    
+    position: absoute;
+    top: 300px;
 }

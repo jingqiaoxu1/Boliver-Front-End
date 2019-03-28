@@ -18,9 +18,9 @@ export class TopBar extends React.Component {
                         for everyone. We're the first robot delivery service in the world<br />
                         and we’re pioneering an industry, not just a company.
                 </p>
-                
-                <img className="App-background1" src={process.env.PUBLIC_URL + '/background1.jpg'} alt="background1" />
-                
+                <div className="App-background1">
+                    <img src={process.env.PUBLIC_URL + '/background1.jpg'} alt="background1" />
+                </div>
             </header>
         )
     }
