@@ -5,7 +5,6 @@ export class TopBar extends React.Component {
     render() {
         return (
             <header className="App-header">
-                
                 <img className="App-logo" src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" />
                 <h1 className="App-name-Bo"><span className="App-name-liver">Bo</span>liver</h1>
 
@@ -14,9 +13,10 @@ export class TopBar extends React.Component {
                         You pick the location,<br />
                         we will take care of the rest<br />
                     </span>
-                        I'm a paragraph. Click here to add your own text and edit me.<br />
-                        I’m a great place for you to tell a story and let your users<br />
-                        know a little more about you.
+
+                        Our mission is to improve lifestyles by making delivery instant<br />
+                        for everyone. We're the first robot delivery service in the world<br />
+                        and we’re pioneering an industry, not just a company.
                 </p>
                 
                 <img className="App-background1" src={process.env.PUBLIC_URL + '/background1.jpg'} alt="background1" />
@@ -25,3 +25,4 @@ export class TopBar extends React.Component {
         )
     }
 }
+
