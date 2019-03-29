@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Form, Input, Button, message
@@ -211,6 +212,9 @@ import { API_ROOT } from '../constants';
           </Form.Item> */}
           <Form.Item {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">Register</Button>
+            <p className="text">
+              I already have an account, go back to <Link to="/login">login</Link>
+            </p>
           </Form.Item>
         </Form>
       );

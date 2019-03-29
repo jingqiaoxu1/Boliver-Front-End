@@ -3,3 +3,7 @@
     margin: 0 auto;
 }
 
+.text {
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+}
