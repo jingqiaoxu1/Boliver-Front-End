@@ -4,7 +4,7 @@
 @import 'styles/NavBar.css';
 @import 'styles/Register.css';
 @import 'styles/Main.css';
-
+@import 'styles/Login.css';
 body {
   margin: 0;
   padding: 0;
