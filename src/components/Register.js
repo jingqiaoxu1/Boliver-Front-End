@@ -4,6 +4,7 @@ import {
     Form, Input, Button
   } from 'antd';
   
+import { API_ROOT } from '../constants';
 
   class RegistrationForm extends React.Component {
     state = {
@@ -16,6 +17,30 @@ import {
       this.props.form.validateFieldsAndScroll((err, values) => {
         if (!err) {
           console.log('Received values of form: ', values);
+          fetch(`${API_ROOT}/register`, {
+            method: 'POST',
+            body: JSON.stringify({
+                username: values.username,
+                password: values.password,
+                email: values.email,
+                first_name: values.firstname,
+                last_name: values.lastname,
+            }),
+          }).then((response) => {
+            if (response.ok) {
+              return response;
+            }
+            throw new Error(response.statusText);
+          })
+          .then((response) => {
+              if (response.ok) {
+                  return response
+              }
+              throw new Error(response.statusText)
+          })
+          .then((response) => response.text())
+          .then ((response) => console.log(response))
+          .catch((err) => console.log(err))
         }
       });
     }
@@ -179,63 +204,6 @@ import {
               <Input type="email" onBlur={this.handleConfirmBlur} />
             )}
           </Form.Item>
-          <Form.Item
-            label="Address"
-          >
-            {getFieldDecorator('address', {
-              rules: [{
-                required: true, message: 'Please input your address!',
-              }],
-            })(
-              <Input />
-            )}
-          </Form.Item>
-          <Form.Item
-            label="City"
-          >
-            {getFieldDecorator('city', {
-              rules: [{
-                required: true, message: 'Please input your city!',
-              }],
-            })(
-              <Input />
-            )}
-          </Form.Item>
-          <Form.Item
-            label="State"
-          >
-            {getFieldDecorator('state', {
-              rules: [{
-                required: true, message: 'Please input your state!',
-              }],
-            })(
-              <Input />
-            )}
-          </Form.Item>
-          <Form.Item
-            label="Country"
-          >
-            {getFieldDecorator('country', {
-              rules: [{
-                required: true, message: 'Please input your country!',
-              }],
-            })(
-              <Input />
-            )}
-          </Form.Item>
-          <Form.Item
-            label="Zip"
-          >
-            {getFieldDecorator('zip', {
-              rules: [{
-                required: true, message: 'Please input your zip!',
-              }],
-            })(
-              <Input />
-            )}
-          </Form.Item>
-         
-          
           <Form.Item {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">Register</Button>
           </Form.Item>
@@ -243,5 +211,7 @@ import {
       );
     }
   }
+  
+
   
   export const Register = Form.create({ name: 'register' })(RegistrationForm);  

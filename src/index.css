@@ -3,6 +3,7 @@
 @import 'styles/TopBar.css';
 @import 'styles/NavBar.css';
 @import 'styles/Register.css';
+
 body {
   margin: 0;
   padding: 0;

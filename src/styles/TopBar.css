@@ -1,47 +1,51 @@
-.App-logo {
-    height: 60px;
-    margin-left: 200px;
-}
-
+/* TopBar background */
 .App-header {
-    background-color: transparent; 
-    text-align: left;
-    height: 350px;
+    background-image: url('../assets/images/background1.jpg');
+    background-size: cover;
+    height: 380px;
 }
 
+/* Company Logo */
+.App-logo {
+   display: flex;
+   flex-direction: row;
+   padding-top: 10px;
+   padding-left: 500px;
+}
+.App-logo img {
+    height: 60px;
+}
 .App-name-Bo {
-    display: inline;
-    position: absolute;
-    top: 15px;
-    text-align: left;
+    padding-top: 12px;
     color: black;
-    font-family: Monoton; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+    font-family: Monoton; font-size: 3.5rem; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
 }
 .App-name-liver {
+    padding-top: 12px;
     color: #E63F00;
-    font-family: Monoton; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+    font-family: Monoton; font-size: 3.5rem; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
 }
 
-.App-introduction {
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 15px; 
-    padding-left: 210px;
-    margin-top: 30px;
+/* Company introduction */
+.App-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 510px;
+    padding-top: 60px;
 }
-.App-slogan {
-    font-size: 25px;
+.Large-font {
+    font-size: 2.2rem;
     font-family: 'Open Sans', sans-serif;
-    line-height: 30px;
+    line-height: 35px;  /* adjust line space */
+    text-align: left;
+    margin-bottom: 10px;
 }
-.App-background1 {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
+.Small-font {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 19px; 
+    text-align: left;
 }
 
-.App-background1 img{
-    width: 100%;
-}
+
 
