@@ -39,6 +39,7 @@ import { API_ROOT } from '../constants';
           .then((response) => response.text())
           .then ((response) => {
             message.success("Registration Success!")
+            this.props.history.push("/login")
             console.log(response)
           })
 
