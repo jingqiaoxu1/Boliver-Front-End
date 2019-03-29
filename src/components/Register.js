@@ -1,10 +1,11 @@
 import React from 'react';
 
 import {
-    Form, Input, Button
+    Form, Input, Button, message
   } from 'antd';
   
 import { API_ROOT } from '../constants';
+
 
   class RegistrationForm extends React.Component {
     state = {
@@ -24,23 +25,27 @@ import { API_ROOT } from '../constants';
                 password: values.password,
                 email: values.email,
                 first_name: values.firstname,
-                last_name: values.lastname,
+                last_name: values.lastname
             }),
-          }).then((response) => {
+          })
+          .then((response) => {
             if (response.ok) {
               return response;
             }
             throw new Error(response.statusText);
           })
-          .then((response) => {
-              if (response.ok) {
-                  return response
-              }
-              throw new Error(response.statusText)
-          })
+
           .then((response) => response.text())
-          .then ((response) => console.log(response))
-          .catch((err) => console.log(err))
+          .then ((response) => {
+            message.success("Registration Success!")
+            console.log(response)
+          })
+
+          //cannot pop up Failed???
+          .catch ((err) => {
+            message.error("Registration Failed")
+            console.log(err)
+          })
         }
       });
     }
@@ -67,22 +72,22 @@ import { API_ROOT } from '../constants';
       callback();
     }
 
-    compareToFirstEmail = (rule, value, callback) => {
-        const form = this.props.form;
-        if (value && value !== form.getFieldValue('email')) {
-          callback('Two emails that you enter is inconsistent!');
-        } else {
-          callback();
-        }
-      }
+    // compareToFirstEmail = (rule, value, callback) => {
+    //     const form = this.props.form;
+    //     if (value && value !== form.getFieldValue('email')) {
+    //       callback('Two emails that you enter is inconsistent!');
+    //     } else {
+    //       callback();
+    //     }
+    //   }
 
-    validateToNextEmail = (rule, value, callback) => {
-    const form = this.props.form;
-    if (value && this.state.confirmDirty) {
-        form.validateFields(['confirmEmail'], { force: true });
-    }
-    callback();
-    }
+    // validateToNextEmail = (rule, value, callback) => {
+    // const form = this.props.form;
+    // if (value && this.state.confirmDirty) {
+    //     form.validateFields(['confirmEmail'], { force: true });
+    // }
+    // callback();
+    // }
 
     render() {
       const { getFieldDecorator } = this.props.form;
@@ -191,7 +196,7 @@ import { API_ROOT } from '../constants';
             )}
           </Form.Item>
           
-          <Form.Item
+          {/* <Form.Item
             label="Confirm E-mail"
           >
             {getFieldDecorator('confirmEmail', {
@@ -203,7 +208,7 @@ import { API_ROOT } from '../constants';
             })(
               <Input type="email" onBlur={this.handleConfirmBlur} />
             )}
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">Register</Button>
           </Form.Item>

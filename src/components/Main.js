@@ -5,9 +5,8 @@ import { Register } from './Register';
 export class Main extends React.Component {
     render() {
         return (
-            <div>
+            <div className="main">
                 <Register />
-                
             </div>
         )
     }

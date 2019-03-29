@@ -4,7 +4,6 @@
     background-size: cover;
     height: 380px;
 }
-
 /* Company Logo */
 .App-logo {
    display: flex;
@@ -25,7 +24,6 @@
     color: #E63F00;
     font-family: Monoton; font-size: 3.5rem; font-style: normal; font-variant: normal; font-weight: 400; line-height: 40px; } h3 { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Monoton; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Monoton; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Monoton; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
 }
-
 /* Company introduction */
 .App-text {
     display: flex;
