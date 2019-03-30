@@ -12,13 +12,20 @@ export class Main extends React.Component {
         <Redirect to="/home" />:
         <Login handleLogin={this.props.handleLogin} />
     }
+
+    getHome = () => {
+        return this.props.isLoggedIn ?
+        <Home />:
+        <Redirect to="/login" />
+    }
+
     render() {
         return (
             <div className="main">
                 <Switch>
                     <Route path="/register" component={Register} />
                     <Route path="/login" render={this.getLogin} />
-                    <Route path="/home" component={Home} />
+                    <Route path="/home" render={this.getHome} />
                     <Route render={this.getLogin} />
                 </Switch>
 
