@@ -9,7 +9,10 @@ export class TopBar extends React.Component {
                 <div className="App-logo">
                     <img src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" />
                     <h1 className="App-name-Bo"><span className="App-name-liver">Bo</span>liver</h1>
-                    <Icon className="logout" type="logout" />{' '}Logout
+                    {this.props.isLoggedIn ?
+                        <a className="logout" onClick={this.props.handleLogout} >
+                            <Icon type="logout" /> Logout
+                        </a> : null}
                 </div>
 
                 <div className="App-text">
@@ -25,10 +28,7 @@ export class TopBar extends React.Component {
                 </div>
                 
 
-                {/* {this.props.isLoggedIn ?
-                        <a className="logout" onClick={this.props.handleLogout} >
-                            <Icon type="logout" /> <h1>Logout</h1>
-                         </a> : null} */}
+                
                 
                
 

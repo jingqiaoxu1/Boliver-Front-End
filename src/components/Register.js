@@ -42,8 +42,7 @@ import { API_ROOT } from '../constants';
             this.props.history.push("/login")
             console.log(response)
           })
-
-          //cannot pop up Failed???
+          
           .catch ((err) => {
             message.error("Registration Failed")
             console.log(err)

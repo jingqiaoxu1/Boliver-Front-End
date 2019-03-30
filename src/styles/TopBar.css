@@ -10,6 +10,7 @@
    flex-direction: row;
    padding-top: 10px;
    padding-left: 500px;
+   padding-right: 20px;
 }
 .App-logo img {
     height: 60px;
@@ -46,7 +47,9 @@
 }
 
 .logout {
-    color: red;
-    font-size: 0.7rem;
+    color:#E63F00;
+    font-size: 1.1rem;
+    margin: 10px auto;
+    margin-right: 0;
 }
 
