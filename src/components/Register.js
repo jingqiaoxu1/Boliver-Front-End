@@ -52,11 +52,16 @@ import { API_ROOT } from '../constants';
       });
     }
   
-    handleConfirmBlur = (e) => {
+    handleConfirmBlur1 = (e) => {
       const value = e.target.value;
-      this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+      this.setState({ confirmDirty1: this.state.confirmDirty1 || !!value });
     }
-  
+    
+    handleConfirmBlur2 = (e) => {
+      const value = e.target.value;
+      this.setState({ confirmDirty2: this.state.confirmDirty2 || !!value });
+    }
+
     compareToFirstPassword = (rule, value, callback) => {
       const form = this.props.form;
       if (value && value !== form.getFieldValue('password')) {
@@ -74,22 +79,22 @@ import { API_ROOT } from '../constants';
       callback();
     }
 
-    // compareToFirstEmail = (rule, value, callback) => {
-    //     const form = this.props.form;
-    //     if (value && value !== form.getFieldValue('email')) {
-    //       callback('Two emails that you enter is inconsistent!');
-    //     } else {
-    //       callback();
-    //     }
-    //   }
+    compareToFirstEmail = (rule, value, callback) => {
+        const form = this.props.form;
+        if (value && value !== form.getFieldValue('email')) {
+          callback('Two emails that you enter is inconsistent!');
+        } else {
+          callback();
+        }
+      }
 
-    // validateToNextEmail = (rule, value, callback) => {
-    // const form = this.props.form;
-    // if (value && this.state.confirmDirty) {
-    //     form.validateFields(['confirmEmail'], { force: true });
-    // }
-    // callback();
-    // }
+    validateToNextEmail = (rule, value, callback) => {
+    const form = this.props.form;
+    if (value && this.state.confirmDirty) {
+        form.validateFields(['confirmEmail'], { force: true });
+    }
+    callback();
+    }
 
     render() {
       const { getFieldDecorator } = this.props.form;
@@ -156,7 +161,7 @@ import { API_ROOT } from '../constants';
                 validator: this.compareToFirstPassword,
               }],
             })(
-              <Input type="password" onBlur={this.handleConfirmBlur} />
+              <Input type="password" onBlur={this.handleConfirmBlur1} />
             )}
           </Form.Item>
           
@@ -198,7 +203,7 @@ import { API_ROOT } from '../constants';
             )}
           </Form.Item>
           
-          {/* <Form.Item
+          <Form.Item
             label="Confirm E-mail"
           >
             {getFieldDecorator('confirmEmail', {
@@ -208,9 +213,10 @@ import { API_ROOT } from '../constants';
                 validator: this.compareToFirstEmail,
               }],
             })(
-              <Input type="email" onBlur={this.handleConfirmBlur} />
+              <Input type="email" onBlur={this.handleConfirmBlur2} />
             )}
-          </Form.Item> */}
+          </Form.Item>
+
           <Form.Item {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">Register</Button>
             <p className="text">

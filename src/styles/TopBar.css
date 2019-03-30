@@ -45,5 +45,8 @@
     text-align: left;
 }
 
-
+.logout {
+    color: red;
+    font-size: 0.7rem;
+}
 
