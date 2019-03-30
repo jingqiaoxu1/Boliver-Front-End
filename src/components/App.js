@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import { TopBar } from './TopBar';
 import { NavBar } from './NavBar';
 import { Main } from './Main';
-
+import { TOKEN_KEY } from '../constants';
 
 class App extends Component {
 
   state = {
-    isLoggedIn: false
+    isLoggedIn: !!localStorage.getItem(TOKEN_KEY) 
   }
 
   //callback function 1
-  handleLogin = () => {
+  handleLogin = (token) => {
     this.setState({ isLoggedIn: true })
+    localStorage.setItem(TOKEN_KEY, token)
   }
 
   //callback function 2
   handleLogout = () => {
     this.setState({ isLoggedIn: false })
+    localStorage.removeItem(TOKEN_KEY)
   }
 
 

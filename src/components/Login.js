@@ -28,7 +28,7 @@ import { API_ROOT } from '../constants';
             .then ((response) => { 
                 message.success("Login Success!")
                 console.log(response)
-                this.props.handleLogin();
+                this.props.handleLogin(response);
             })
             .catch((err) => { 
                 message.error("Login Failed")
