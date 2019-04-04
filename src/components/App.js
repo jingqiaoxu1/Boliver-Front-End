@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TopBar } from './TopBar';
-import { NavBar } from './NavBar';
+
 import { Main } from './Main';
 import { TOKEN_KEY } from '../constants';
 
@@ -32,7 +32,7 @@ class App extends Component {
           isLoggedIn={this.state.isLoggedIn}
           handleLogout={this.handleLogout}
         />
-        <NavBar />
+        
         <Main 
           isLoggedIn={this.state.isLoggedIn}
           handleLogin={this.handleLogin}
