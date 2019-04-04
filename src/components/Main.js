@@ -29,9 +29,6 @@ export class Main extends React.Component {
                     <Route render={this.getLogin} />
                 </Switch>
 
-                <Link to="/register">Register</Link><br />
-                <Link to="/login">Login</Link><br />
-                <Link to="/home">Home</Link>
             </div>
         )
     }
