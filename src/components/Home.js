@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 
 
 
+
 export class Home extends React.Component {
 
     render() {
@@ -16,6 +17,9 @@ export class Home extends React.Component {
                 <TabPane className="home" tab="Home" key="1">
                     <div className="infobox">
                         <img src={require('../assets/images/info1.jpg')} alt="info1" />   
+                        <div className="blackblock">
+                            <h2 className="title">About Us</h2>
+                        </div>
                         <p className="text">
                             I'm a paragraph. Click here to add your own<br />
                             text and edit me. I’m a great place for you to<br /> 
@@ -31,6 +35,9 @@ export class Home extends React.Component {
                     </div>
                     <div className="infobox">
                         <img src={require('../assets/images/info2.jpg')} alt="info2" />   
+                        <div className="blackblock">
+                            <h2 className="title">GroundRobot Delivers</h2>
+                        </div>
                         <p className="text">
                             I'm a paragraph. Click here to add your own<br />
                             text and edit me. I’m a great place for you to<br /> 
@@ -45,7 +52,10 @@ export class Home extends React.Component {
                         </p>
                     </div>
                     <div className="infobox">
-                    <img src={require('../assets/images/info3.png')} alt="info2" />   
+                        <img src={require('../assets/images/info3.png')} alt="info2" /> 
+                        <div className="blackblock">
+                            <h2 className="title">Drone Delivers</h2>
+                        </div>  
                         <p className="text">
                             I'm a paragraph. Click here to add your own<br />
                             text and edit me. I’m a great place for you to<br /> 
