@@ -6,6 +6,8 @@
 @import 'styles/Login.css';
 @import 'styles/Home.css';
 @import 'styles/Footer.css';
+@import 'styles/Track.css';
+
 body {
   margin: 0;
   padding: 0;
