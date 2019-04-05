@@ -5,6 +5,7 @@
 @import 'styles/Main.css';
 @import 'styles/Login.css';
 @import 'styles/Home.css';
+@import 'styles/Footer.css';
 body {
   margin: 0;
   padding: 0;

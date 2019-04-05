@@ -27,11 +27,6 @@ export class TopBar extends React.Component {
                     </p>
                 </div>
                 
-
-                
-                
-               
-
             </header>
         )
     }

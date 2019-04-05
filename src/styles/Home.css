@@ -1,8 +1,4 @@
-.main-tabs {
 
-    margin-left: 100px;
-    margin-right: 100px;
- }
 
  /*NavBar style antd*/
  .ant-tabs-nav-container {
@@ -15,25 +11,52 @@
     font-weight: bold;
 }
  
- .home {
-     display: flex;
-     height: 400px;
-     width: 600px;
-     padding-left: 280px;
-     padding-right: 280px;
-     justify-content: space-evenly;
+ .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+      ". box1 box2 box3 ."
+      "footer footer footer footer footer";
  }
 
- .infobox {
+ .box1 {
+     grid-area: box1;
      margin-top: 10px;
      width: 350px;
      border: 0.6rem solid lightgrey;
  }
+ .box2 {
+    grid-area: box2;
+    margin-top: 10px;
+    width: 350px;
+    border: 0.6rem solid lightgrey;
+}
+.box3 {
+    grid-area: box3;
+    margin-top: 10px;
+    width: 350px;
+    border: 0.6rem solid lightgrey;
+}
 
-.infobox img {
+.footer {
+    grid-area: footer;
+}
+
+.box1 img {
     height: 50%;
     width: 100%;
 }
+.box2 img {
+    height: 50%;
+    width: 100%;
+}
+.box3 img {
+    height: 50%;
+    width: 100%;
+}
+
 .blackblock {
     height: 35px;
     background-color: black;

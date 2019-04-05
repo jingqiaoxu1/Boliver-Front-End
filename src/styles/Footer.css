@@ -1,0 +1,35 @@
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 200px;
+
+   
+}
+
+.box11 {
+   
+    width: 500px;
+    margin-right: 70px;
+   
+}
+
+.box22 {
+    width: 500px;
+    margin-left: 70px;
+}
+
+.large {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.small {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}

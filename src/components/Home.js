@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs } from 'antd';
+import { Footer } from './Footer.js';
 
 
 
@@ -14,8 +15,8 @@ export class Home extends React.Component {
         }
         return (
             <Tabs className="main-tabs" defaultActiveKey="1" onChange={callback}>
-                <TabPane className="home" tab="Home" key="1">
-                    <div className="infobox">
+                <TabPane className="wrapper" tab="Home" key="1">
+                    <div className="box1">
                         <img src={require('../assets/images/info1.jpg')} alt="info1" />   
                         <div className="blackblock">
                             <h2 className="title">About Us</h2>
@@ -33,7 +34,7 @@ export class Home extends React.Component {
                             your company.
                         </p>
                     </div>
-                    <div className="infobox">
+                    <div className="box2">
                         <img src={require('../assets/images/info2.jpg')} alt="info2" />   
                         <div className="blackblock">
                             <h2 className="title">GroundRobot Delivers</h2>
@@ -51,7 +52,7 @@ export class Home extends React.Component {
                             your company.
                         </p>
                     </div>
-                    <div className="infobox">
+                    <div className="box3">
                         <img src={require('../assets/images/info3.png')} alt="info2" /> 
                         <div className="blackblock">
                             <h2 className="title">Drone Delivers</h2>
@@ -69,6 +70,7 @@ export class Home extends React.Component {
                             your company.
                         </p>
                     </div>
+                    <Footer className="footer"/>
                 </TabPane>
                 <TabPane tab="Ship" key="2">Content of Tab Pane 2</TabPane>
                 <TabPane tab="Track" key="3">Content of Tab Pane 3</TabPane>
