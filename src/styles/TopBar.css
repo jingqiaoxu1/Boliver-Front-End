@@ -3,7 +3,7 @@
     background-image: url('../assets/images/background1.jpg');
     background-size: cover;
     height: 380px;
-    border-bottom: 1.5rem solid #2B2A2A;
+    border-bottom: 0.5rem solid #2B2A2A;
 }
 /* Company Logo */
 .App-logo {

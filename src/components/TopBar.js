@@ -7,7 +7,7 @@ export class TopBar extends React.Component {
             <header className="App-header">
 
                 <div className="App-logo">
-                    <img src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" />
+                    <img src={require('../assets/images/logo.png')} alt="logo" />
                     <h1 className="App-name-Bo"><span className="App-name-liver">Bo</span>liver</h1>
                     {this.props.isLoggedIn ?
                         <a className="logout" onClick={this.props.handleLogout} >

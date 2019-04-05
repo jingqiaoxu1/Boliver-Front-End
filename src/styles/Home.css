@@ -1,0 +1,43 @@
+.main-tabs {
+
+    margin-left: 100px;
+    margin-right: 100px;
+ }
+
+ /*NavBar style antd*/
+ .ant-tabs-nav-container {
+     font-size: 1.3rem;
+     font-weight: bold;
+ }
+ .ant-tabs-nav .ant-tabs-tab-active {
+    color: #1890ff;
+    font-weight: 500;
+    font-weight: bold;
+}
+ 
+ .home {
+     display: flex;
+     height: 400px;
+     width: 600px;
+     padding-left: 280px;
+     padding-right: 280px;
+     justify-content: space-evenly;
+ }
+ .infobox {
+     margin-top: 10px;
+     width: 350px;
+     border: 0.6rem solid lightgrey;
+ }
+.infobox img {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.text {
+    margin-left: 8px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 15px; 
+    text-align: left;
+}
+
