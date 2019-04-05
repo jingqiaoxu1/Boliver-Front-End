@@ -1,4 +1,5 @@
 import React from 'react';
+
 export class Footer extends React.Component {
     render() {
         return (
@@ -14,6 +15,12 @@ export class Footer extends React.Component {
                     <h2 className="large">General Communication</h2>
                     <p className="small">
                         info@Boliver.com
+                    </p>
+                </div>
+                <div className="box33">
+                    <h2 className="large">Question??</h2>
+                    <p className="small">
+                        202-453-3424
                     </p>
                 </div>
             </div>

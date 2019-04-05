@@ -2,34 +2,43 @@
     background-color: black;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    height: 200px;
-
-   
+    padding: 10px;
+    height: 100px;
 }
 
 .box11 {
    
-    width: 500px;
-    margin-right: 70px;
-   
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding-left: 100px;
 }
 
-.box22 {
-    width: 500px;
-    margin-left: 70px;
+.box22 { 
+    width: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 70px;
+}
+
+.box33 {
+    
+    width: 300px;
+    margin-left: 50px;
+    margin-right: 20px;
+    padding-left: 100px;
 }
 
 .large {
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .small {
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 0.8rem;
-    text-align: center;
+    text-align: left;
 }
