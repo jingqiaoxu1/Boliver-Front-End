@@ -2,6 +2,8 @@ import React from 'react';
 import { Tabs } from 'antd';
 import { Footer } from './Footer.js';
 import { Track } from './Track.js';
+import { History } from './History';
+
 
 
 
@@ -76,7 +78,10 @@ export class Home extends React.Component {
                 <TabPane tab="Track" key="3">
                     <Track />
                 </TabPane>
-                <TabPane tab="History" key="4">Content of Tab Pane 4</TabPane>
+                <TabPane tab="History" key="4">
+                    <History />
+                    <Footer className="footer"/>
+                </TabPane>
             </Tabs>
 
             
