@@ -1,19 +1,20 @@
 import React from 'react';
 import { Modal, Button, message } from 'antd';
 import { TOKEN_KEY, AUTH_HEADER, API_ROOT } from '../constants';
+
 /**pass currentorders data from track.js to here */
 export class CancelButton extends React.Component {
     
     state = {
         visible: false,
-
+        goRerender: false
     }
     
     showModal = () => {
         this.setState({
             visible: true,
         });
-        console.log(this.props.currentorder);
+        console.log(this.props.currentorder.order_id);
     }
 
     handleClose = () => {
@@ -22,15 +23,15 @@ export class CancelButton extends React.Component {
 
     handleNo = () => {
         this.setState({ visible: false });
-        
     }
 
     handleYes = () => {
-        const { order_id } = this.props.currentorder.order_id;
+        const order_id  = this.props.currentorder.order_id; //只取一个元素，就不加{}
+        console.log(order_id);
 
         this.setState({ visible: false });
         const token = localStorage.getItem(TOKEN_KEY);
-        console.log(order_id);
+    
         
         // Fire API call - cancelorder
         fetch(`${API_ROOT}/cancelorder`, {
@@ -49,12 +50,12 @@ export class CancelButton extends React.Component {
             throw new Error("Fail to cancel order.");
         })
         .then((data) => {
+            this.props.loadCurrentOrders(); 
             console.log(data);
         })
         .catch((e) => {
             console.log(e);
         })
-
     }
 
 
@@ -73,8 +74,8 @@ export class CancelButton extends React.Component {
                 title={<div><b>Order Id: </b> {this.props.currentorder.order_id}</div>}
                 onCancel={this.handleClose}
                 footer={[
-                    <Button key="no" onClick={this.handleNo}>No</Button>,
-                    <Button key="yes" onClick={this.handleYes}>Yes</Button>,
+                    <Button key="no" onClick={this.handleNo} >No</Button>,
+                    <Button key="yes" onClick={this.handleYes} >Yes</Button>,
                 ]}
             >
             <p className="textStyle">Do you really want to cancle your order?</p>

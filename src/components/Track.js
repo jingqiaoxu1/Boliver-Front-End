@@ -74,13 +74,11 @@ export class Track extends React.Component {
                                         <b className="spacer1"></b>{item.origin} <br />
                                         <b>Ship &nbsp; &nbsp; &nbsp;to: </b>{item.receiver} <br /> 
                                         <b className="spacer2"></b>{item.destination} <br />
-                                    </div>
-                                    
-                                    
+                                    </div> 
                                 }
                                 />
-                                <TrackButton />
-                                <CancelButton currentorder={item}/>
+                                <TrackButton currentorder={item}/>
+                                <CancelButton currentorder={item} loadCurrentOrders={this.loadCurrentOrders}/>
                             </List.Item>    
                         )} 
                     />
