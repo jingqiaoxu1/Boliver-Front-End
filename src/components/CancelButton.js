@@ -52,6 +52,7 @@ export class CancelButton extends React.Component {
         .then((data) => {
             this.setState({ visible: false });
             this.props.loadCurrentOrders(); 
+            message.success("Your order has been canceled!")
             console.log(data);
         })
         .catch((e) => {

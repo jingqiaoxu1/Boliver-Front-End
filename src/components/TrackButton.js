@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button } from 'antd';
+import { Modal, Button, message } from 'antd';
 import { TrackTimeline } from './TrackTimeline';
 import { TOKEN_KEY, AUTH_HEADER, API_ROOT } from '../constants';
 
@@ -45,6 +45,7 @@ export class TrackButton extends React.Component {
         .then((data) => {
             this.setState({ visible: false });
             this.props.loadCurrentOrders(); 
+            message.success("Thank you for confirming your order!")
             console.log(data);
         })
         .catch((e) => {
