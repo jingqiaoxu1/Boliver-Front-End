@@ -2,7 +2,7 @@ import React from 'react';
 import { Timeline, Tooltip, Progress } from 'antd';
 
 export class TrackTimeline extends React.Component {
-    
+
     getTimeline = () => {
         const { orderStatus, e_arrival } = this.props.currentorder;
         console.log(orderStatus);
@@ -25,7 +25,7 @@ export class TrackTimeline extends React.Component {
                     <Tooltip title="In transit">
                         <p className="textStyle">
                             Your package is on the way.<br />
-                            It is guaranteed to be delivered at {e_arrival}.
+                            It is estimated to be delivered at {e_arrival}.
                         </p>
                         <Progress percent={66} successPercent={33} />
                         
@@ -37,7 +37,7 @@ export class TrackTimeline extends React.Component {
                     <Tooltip title="Retriving package">
                         <p className="textStyle">
                             Robot is on its way to pick up your package. <br />
-                            Your package is guaranteed to be delivered at {e_arrival}.
+                            Your package is extimated to be delivered at {e_arrival}.
                         </p>
                         
                         <Progress percent={33} successPercent={33} />
