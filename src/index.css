@@ -8,6 +8,7 @@
 @import 'styles/Footer.css';
 @import 'styles/Track.css';
 @import 'styles/HistoryFrame.css';
+@import 'styles/CancelButton.css';
 
 body {
   margin: 0;
