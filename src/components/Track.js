@@ -77,7 +77,7 @@ export class Track extends React.Component {
                                     </div> 
                                 }
                                 />
-                                <TrackButton currentorder={item}/>
+                                <TrackButton currentorder={item} loadCurrentOrders={this.loadCurrentOrders}/>
                                 <CancelButton currentorder={item} loadCurrentOrders={this.loadCurrentOrders}/>
                             </List.Item>    
                         )} 

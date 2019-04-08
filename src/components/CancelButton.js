@@ -50,10 +50,12 @@ export class CancelButton extends React.Component {
             throw new Error("Fail to cancel order.");
         })
         .then((data) => {
+            this.setState({ visible: false });
             this.props.loadCurrentOrders(); 
             console.log(data);
         })
         .catch((e) => {
+            this.setState({ visible: false });
             console.log(e);
         })
     }
