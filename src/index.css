@@ -9,6 +9,7 @@
 @import 'styles/Track.css';
 @import 'styles/HistoryFrame.css';
 @import 'styles/CancelButton.css';
+@import 'styles/TrackTimeline.css';
 
 body {
   margin: 0;

@@ -70,7 +70,7 @@ export class TrackButton extends React.Component {
                         <Button key="confirm" onClick={this.handleConfirmOrder}>Comfirm Order</Button>,
                     ]}
                 >
-                    <TrackTimeline />
+                    <TrackTimeline currentorder={this.props.currentorder}/>
                     
                     
                 </Modal> : 

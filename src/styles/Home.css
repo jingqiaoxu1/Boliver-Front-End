@@ -10,6 +10,7 @@
     font-weight: 500;
     font-weight: bold;
 }
+
  
  .wrapper {
     display: grid;
@@ -25,18 +26,21 @@
      grid-area: box1;
      margin-top: 10px;
      width: 350px;
+     height: 430px;
      border: 0.6rem solid lightgrey;
  }
  .box2 {
     grid-area: box2;
     margin-top: 10px;
     width: 350px;
+    height: 430px;
     border: 0.6rem solid lightgrey;
 }
 .box3 {
     grid-area: box3;
     margin-top: 10px;
     width: 350px;
+    height: 430px;;
     border: 0.6rem solid lightgrey;
 }
 
@@ -45,15 +49,15 @@
 }
 
 .box1 img {
-    height: 50%;
+    height: 200px;
     width: 100%;
 }
 .box2 img {
-    height: 50%;
+    height: 200px;
     width: 100%;
 }
 .box3 img {
-    height: 50%;
+    height: 200px;
     width: 100%;
 }
 
@@ -72,10 +76,23 @@
 }
 
 .text {
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     line-height: 15px; 
     text-align: left;
+    height: 110px;
+}
+
+.ant-btn.readmorebutton {
+    margin-left: 180px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    background-color: #ED8600;
+    color: white;
+    font-size: 1rem;
+    text-align: right;
+    
 }
 
