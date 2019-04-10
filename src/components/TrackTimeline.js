@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timeline, Tooltip, Progress } from 'antd';
+import { Tooltip, Progress } from 'antd';
 
 export class TrackTimeline extends React.Component {
     state = {
@@ -15,14 +15,14 @@ export class TrackTimeline extends React.Component {
         const time = new Date().toLocaleString();
         this.setState({
             time: time
-        }) 
+        })
     }
 
     getTimeline = () => {
-        const { orderStatus, e_arrival } = this.props.currentorder;
+        const { orderStatus, e_arrival } = this.props.currentOrder;
         console.log(orderStatus);
 
-        if (orderStatus == 0) { 
+        if (orderStatus === '0') {
             return (
                 <div>
                     <Tooltip title="Delivered">
@@ -34,7 +34,7 @@ export class TrackTimeline extends React.Component {
                     </Tooltip>
                 </div>
             )
-        } else if (orderStatus == 1) {
+        } else if (orderStatus === '1') {
             return (
                 <div>
                     <Tooltip title="In transit">
@@ -43,11 +43,11 @@ export class TrackTimeline extends React.Component {
                             It is estimated to be delivered at {e_arrival}.
                         </p>
                         <Progress percent={100} successPercent={66} />
-                        
+
                     </Tooltip>
                 </div>
             )
-        } else if (orderStatus == 2) {
+        } else if (orderStatus === '2') {
             return (
                 <div>
                     <Tooltip title="Retriving package">
@@ -55,18 +55,18 @@ export class TrackTimeline extends React.Component {
                             Robot is on its way to pick up your package. <br />
                             Your package is estimated to be delivered at {e_arrival}.
                         </p>
-                        
+
                         <Progress percent={100} successPercent={33} />
                     </Tooltip>
 
                 </div>
-                
+
             )
         } else {
-                return (<p>Your order has been canceled or successfully delivered. Please check your order in orderHistory.</p>)
+            return (<p>Your order has been canceled or successfully delivered. Please check your order in orderHistory.</p>)
         }
     }
-    
+
     render() {
         return (
             <div>{this.getTimeline()}</div>
@@ -74,55 +74,3 @@ export class TrackTimeline extends React.Component {
     }
 }
 
-
-// timeline
-
-// import React from 'react';
-// import { Timeline } from 'antd';
-
-// export class TrackTimeline extends React.Component {
-    
-//     getTimeline = () => {
-//         const orderStatus = this.props.currentorder.orderStatus;
-//         console.log(orderStatus);
-//         if (orderStatus == 0) {
-//             return (
-//                 <Timeline>
-//                     <Timeline.Item color="red"> 
-//                         Delivered
-//                     </Timeline.Item>
-//                     <Timeline.Item color="black">
-//                         In transit
-//                     </Timeline.Item>
-//                     <Timeline.Item color="black">
-//                         Retreiving package
-//                     </Timeline.Item>
-//                 </Timeline>
-//             )} else if (orderStatus == 1) {
-//             return (
-//                 <Timeline>
-//                     <Timeline.Item color="red">
-//                         In transit
-//                     </Timeline.Item>
-//                     <Timeline.Item color="black">
-//                         Retreiving package
-//                     </Timeline.Item>
-//                 </Timeline>
-//             )} else if (orderStatus == 2) {
-//             return (
-//                 <Timeline>
-//                     <Timeline.Item color="red">
-//                         Retreiving package
-//                     </Timeline.Item>
-//                 </Timeline>
-//             )} else {
-//                 return (<p>Your order has been canceled or successfully delivered. Please check your order in orderHistory.</p>)
-//             }
-//         }
-    
-//     render() {
-//         return (
-//             <div>{this.getTimeline()}</div>
-//         )
-//     }
-// }

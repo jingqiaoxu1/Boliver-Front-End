@@ -8,6 +8,7 @@
 @import 'styles/Footer.css';
 @import 'styles/Track.css';
 @import 'styles/OrderHistory.css';
+@import 'styles/SearchRoutes.css';
 @import 'styles/CancelButton.css';
 @import 'styles/TrackTimeline.css';
 
@@ -25,3 +26,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
