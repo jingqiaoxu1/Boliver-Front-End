@@ -27,8 +27,13 @@ import { API_ROOT } from '../constants';
             })
             .then ((response) => { 
                 message.success("Login Success!")
-                console.log(response)
-                this.props.handleLogin(response);
+                /**Joe */
+                const token = JSON.parse(response)["access_token"];
+                // console.log("token:"+token);
+                this.props.handleLogin(token);
+
+                //console.log(response)
+                //this.props.handleLogin(response);
             })
             .catch((err) => { 
                 message.error("Login Failed")

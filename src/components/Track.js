@@ -1,68 +1,71 @@
 import React from 'react';
-import { List, Avatar, Button } from 'antd';
-import { TOKEN_KEY, AUTH_HEADER, API_ROOT } from '../constants';
+import { List, Avatar, Spin } from 'antd';
 import { TrackButton } from './TrackButton';
+import { CancelButton } from './CancelButton';
 
 export class Track extends React.Component {
 
-    
-
-
-    getCurrentOrderInfo = () => {
-        /**Fire API call */
-        const token = localStorage.getItem(TOKEN_KEY);
-        fetch(`${API_ROOT}/currentorder`, {
-            headers: {
-                Authorization: `${AUTH_HEADER} ${token}`
-            }
-        })
-        .then((response) => {
-            if (response.ok) {
-                return response.text()
-            }
-            throw new Error('Fail to get tracking infomation');
-        })
-        .then((data) => {
-            console.log(data)
-        })
-        .catch((e) => {
-            console.log(e);
-        });
+    componentDidMount() {
+        this.props.loadCurrentOrders();
+        console.log(this.props.state);
     }
 
-    
- 
+    getCurrentOrders = () => {
+        const { error, currentOrders, isLoadingCurrentOrders } = this.props.state;
+
+        if (error) {
+            return error;
+        } else if (isLoadingCurrentOrders) {
+            return <Spin tip="Loading current orders ... " />;
+        } else if (currentOrders && currentOrders.length > 0) {
+            return (
+                <div className="track" >
+                    <List className="list"
+                        itemLayout="horizontal"
+                        pagination={{
+                            onChange: (page) => {
+                                console.log(page);
+                            },
+                            pageSize: 3,
+                        }}
+                        dataSource={currentOrders}
+                        renderItem={item => (
+                            <List.Item>
+                                <List.Item.Meta
+                                    avatar={<Avatar src={require("../assets/images/imagebox.png")} alt="imagebox" />}
+                                    title={<div className="text1">Order ID:  {item.order_id}</div>}
+                                    description={
+                                        <div>
+                                            {/* {item.orderStatus == 0 ? "Delivered" : "On the way" } */}
+                                            <b>Ship from: </b>{item.sender} <br />
+                                            <b className="spacer1"></b>{item.origin} <br />
+                                            <b>Ship to: </b> &nbsp; &nbsp; &nbsp;{item.receiver} <br />
+                                            <b className="spacer2"></b>{item.destination} <br />
+                                            <b>Created at: </b>{item.create_time} <br />
+                                        </div>
+                                    }
+                                />
+                                <TrackButton currentOrder={item} loadCurrentOrders={this.props.loadCurrentOrders} loadOrderHistory={this.props.loadOrderHistory} />
+                                <CancelButton currentOrder={item} loadCurrentOrders={this.props.loadCurrentOrders} loadOrderHistory={this.props.loadOrderHistory} />
+                            </List.Item>
+                        )}
+                    />
+                </div>
+            )
+        } else {
+            return "No History Orders.";
+        }
+    }
 
     render() {
-        //this.getCurrentOrderInfo();
-        const data = [
-            {
-                order_id: 'Order Id: 22019032705031200007',
-                estimate_arrival: 'Your order is arriving at 1:00pm 3/24/2019',
-            },
-            {
-                order_id: 'Order Id: 22019032705031200007',
-                estimate_arrival: 'Your order is arriving at 1:00pm 3/24/2019',
-            }
-          ];
         return (
-            
-            <div className="track" >
-                <List className="list"
-                    itemLayout="horizontal"
-                    dataSource={this.getCurrentOrderInfo()}
-                    renderItem={item => (
-                    <List.Item>
-                        <List.Item.Meta
-                        avatar={<Avatar src={require("../assets/images/imagebox.png")} alt="imagebox" />}
-                        title={item.order_id}
-                        description={item.estimate_arrival}
-                        />
-                        <TrackButton />
-                    </List.Item>
-                    )} 
-                />
+            <div>
+                <div>{this.getCurrentOrders()}</div>
+                <div className="TrackFooter"></div>
             </div>
         )
     }
 }
+
+
+
